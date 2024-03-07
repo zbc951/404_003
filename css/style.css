@@ -1,0 +1,315 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  line-height: 1;
+  font-family: "微軟正黑體";
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-family: "微軟正黑體";
+}
+
+button {
+  outline: none;
+  border: none;
+  padding: 0;
+  font-family: "微軟正黑體";
+  cursor: pointer;
+}
+
+select, input {
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "微軟正黑體";
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+main {
+  display: block;
+}
+
+label {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+i {
+  display: block;
+}
+
+input[type=date]::-webkit-inner-spin-button,
+input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+@font-face {
+  font-family: myCustomFont;
+  src: url("../font/MFinance HK Bold(盈富體).ttf") format("truetype");
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+html body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #000;
+}
+html body main {
+  padding: 60px 0;
+}
+html body main .maintain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
+}
+html body main .maintain .logo {
+  width: 122px;
+  height: 153px;
+  margin-right: 30px;
+}
+html body main .maintain .logo > img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+html body main .maintain .maintainTextBox {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+html body main .maintain .maintainTextBox .maintainText {
+  font-weight: bold;
+}
+html body main .maintain .maintainTextBox .maintainText.maintainText--en {
+  color: #d22442;
+  font-size: 20px;
+  margin-bottom: 17px;
+}
+html body main .maintain .maintainTextBox .maintainText.maintainText--ch {
+  color: #fff;
+  font-family: "myCustomFont";
+}
+html body main .maintain .maintainTextBox .maintainText.maintainText--ch.maintainText--ch__top {
+  font-size: 64px;
+  margin-bottom: 17px;
+}
+html body main .maintain .maintainTextBox .maintainText.maintainText--ch.maintainText--ch__bottom {
+  font-size: 40px;
+}
+html body main .maintainInfo {
+  color: #b1cbff;
+  font-size: 24px;
+  text-align: center;
+}
+html body section {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+html body section .bg {
+  background: url("../img/bg.png") no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+html body section .bg.bg--left {
+  -webkit-clip-path: polygon(0% 0%, 68% 0%, 33% 15%, 68% 24%, 35% 36%, 68% 44%, 35% 54%, 68% 64%, 36% 74%, 68% 85%, 36% 89%, 69% 100%, 0 100%);
+          clip-path: polygon(0% 0%, 68% 0%, 33% 15%, 68% 24%, 35% 36%, 68% 44%, 35% 54%, 68% 64%, 36% 74%, 68% 85%, 36% 89%, 69% 100%, 0 100%);
+}
+html body section .bg.bg--right {
+  -webkit-clip-path: polygon(100% 0, 68% 0%, 33% 15%, 68% 24%, 35% 36%, 68% 44%, 35% 54%, 68% 64%, 36% 74%, 68% 85%, 36% 89%, 69% 100%, 100% 100%);
+          clip-path: polygon(100% 0, 68% 0%, 33% 15%, 68% 24%, 35% 36%, 68% 44%, 35% 54%, 68% 64%, 36% 74%, 68% 85%, 36% 89%, 69% 100%, 100% 100%);
+}
+html body .cones {
+  background: url("../img/cones.png") no-repeat;
+  background-size: contain;
+  width: 410px;
+  height: 397px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+html body.active .bg--left {
+  animation: bg--left__move 0.3s linear 0s 1 reverse forwards;
+}
+@-webkit-keyframes bg--left__move {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  100% {
+    -webkit-transform: translate(-1000px);
+            transform: translate(-1000px);
+  }
+}
+@keyframes bg--left__move {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  100% {
+    -webkit-transform: translate(-1000px);
+            transform: translate(-1000px);
+  }
+}
+html body.active .bg--right {
+  animation: bg--right__move 0.3s linear 0s 1 reverse forwards;
+}
+@-webkit-keyframes bg--right__move {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  100% {
+    -webkit-transform: translate(1000px);
+            transform: translate(1000px);
+  }
+}
+@keyframes bg--right__move {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  100% {
+    -webkit-transform: translate(1000px);
+            transform: translate(1000px);
+  }
+}
+html body.active main {
+  -webkit-animation: flash 1.2s ease-in 0s 1 normal forwards;
+          animation: flash 1.2s ease-in 0s 1 normal forwards;
+}
+@-webkit-keyframes flash {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes flash {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+html body.active .cones {
+  -webkit-animation: backInDown 0.3s ease-out 0.5s 1 normal backwards;
+          animation: backInDown 0.3s ease-out 0.5s 1 normal backwards;
+}
+@-webkit-keyframes backInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-1200px) scaleX(0.5);
+            transform: translateY(-1200px) scaleX(0.5);
+  }
+  80% {
+    -webkit-transform: translateY(0) scaleX(0.5);
+            transform: translateY(0) scaleX(0.5);
+    opacity: 0.7;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes backInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-1200px) scaleX(0.5);
+            transform: translateY(-1200px) scaleX(0.5);
+  }
+  80% {
+    -webkit-transform: translateY(0) scaleX(0.5);
+            transform: translateY(0) scaleX(0.5);
+    opacity: 0.7;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}

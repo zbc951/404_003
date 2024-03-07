@@ -1,0 +1,204 @@
+html {
+    width: 100%;
+    height: 100%;
+    // overflow: hidden;
+
+    body {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background: #000;
+
+        main {
+            padding: 60px 0;
+
+            .maintain {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 40px;
+
+                // logo
+                .logo {
+                    width: 122px;
+                    height: 153px;
+                    margin-right: 30px;
+
+                    >img {
+                        object-fit: contain;
+                    }
+                }
+
+                // text
+                .maintainTextBox {
+                    flex-shrink: 0;
+
+                    .maintainText {
+                        font-weight: bold;
+
+                        &.maintainText--en {
+                            color: #d22442;
+                            font-size: 20px;
+                            margin-bottom: 17px;
+                        }
+
+                        &.maintainText--ch {
+                            color: #fff;
+                            font-family: 'myCustomFont';
+
+                            &.maintainText--ch__top {
+                                font-size: 64px;
+                                margin-bottom: 17px;
+                            }
+
+                            &.maintainText--ch__bottom {
+                                font-size: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .maintainInfo {
+                color: #b1cbff;
+                font-size: 24px;
+                text-align: center;
+            }
+        }
+
+        section {
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            pointer-events: none;
+
+            .bg {
+                background: url("../img/bg.png")no-repeat;
+                background-size: cover;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+
+                &.bg--left {
+                    clip-path: polygon(0% 0%, 68% 0%, 33% 15%, 68% 24%, 35% 36%, 68% 44%, 35% 54%, 68% 64%, 36% 74%, 68% 85%, 36% 89%, 69% 100%, 0 100%);
+                }
+
+                &.bg--right {
+                    clip-path: polygon(100% 0, 68% 0%, 33% 15%, 68% 24%, 35% 36%, 68% 44%, 35% 54%, 68% 64%, 36% 74%, 68% 85%, 36% 89%, 69% 100%, 100% 100%);
+                }
+
+                // &.active {
+
+                //     &.bg--left {
+                //         animation: bg--left__move 0.3s linear 0s 1 reverse forwards;
+
+                //         @keyframes bg--left__move {
+                //             0% {
+                //                 transform: translate(0);
+                //             }
+
+                //             100% {
+                //                 transform: translate(-1000px);
+                //             }
+                //         }
+                //     }
+
+                //     &.bg--right {
+                //         animation: bg--right__move 0.3s linear 0s 1 reverse forwards;
+
+                //         @keyframes bg--right__move {
+                //             0% {
+                //                 transform: translate(0);
+                //             }
+
+                //             100% {
+                //                 transform: translate(1000px);
+                //             }
+                //         }
+                //     }
+                // }
+            }
+        }
+
+        .cones {
+            background: url('../img/cones.png') no-repeat;
+            background-size: contain;
+            width: 410px;
+            height: 397px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        &.active {
+            .bg--left {
+                animation: bg--left__move 0.3s linear 0s 1 reverse forwards;
+
+                @keyframes bg--left__move {
+                    0% {
+                        transform: translate(0);
+                    }
+
+                    100% {
+                        transform: translate(-1000px);
+                    }
+                }
+            }
+
+            .bg--right {
+                animation: bg--right__move 0.3s linear 0s 1 reverse forwards;
+
+                @keyframes bg--right__move {
+                    0% {
+                        transform: translate(0);
+                    }
+
+                    100% {
+                        transform: translate(1000px);
+                    }
+                }
+            }
+
+            main {
+                animation: flash 1.2s ease-in 0s 1 normal forwards;
+
+                @keyframes flash {
+                    from {
+                        opacity: 0;
+                    }
+
+                    to {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .cones {
+                animation: backInDown 0.3s ease-out 0.5s 1 normal backwards;
+
+                @keyframes backInDown {
+                    0% {
+                        opacity: 0;
+                        transform: translateY(-1200px) scaleX(0.5);
+                    }
+
+                    80% {
+                        transform: translateY(0) scaleX(0.5);
+                        opacity: 0.7;
+                    }
+
+                    100% {
+                        transform: scale(1);
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
